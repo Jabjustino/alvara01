@@ -1,0 +1,16 @@
+{
+  "name": "j2c-inovacoes-alvaras",
+  "version": "1.0.0",
+  "description": "J2C Inovações — Assessoria em emissão de alvarás e licenças de actividades económicas em Angola.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "mongodb": "^4.17.2"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "8d5f4723f494609f580448c5f60b27234cc0caf0268b223f",
+    "nome": "jabez",
+    "email": "jhgde@gmail.com",
+    "telefone": "945625416",
+    "senhaHash": "f9843f9a13d30c824d124ba62d3f04c82b3f2d15b9e1274c46b722e0b8fd0542",
+    "criadoEm": "2026-09-13T16:32:00.610Z",
+    "emailLower": "jhgde@gmail.com",
+    "phoneNorm": "945625416"
+  }
+]

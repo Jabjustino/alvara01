@@ -1,0 +1,538 @@
+{
+  "empresa": "J2C Inovações",
+  "descricao": "Base de conhecimento de alvarás e licenças de actividades económicas em Angola",
+  "atividades": [
+    {
+      "id": "comercio",
+      "atividade": "Comércio geral / loja / venda de produtos",
+      "keywords": ["comercio", "loja", "venda", "mercadoria", "supermercado", "mercearia", "boutique", "armazem", "retalho", "grosso", "vender", "produto"],
+      "tipo": "Alvará Comercial",
+      "orgao": "Administração Municipal / Guiché Único da Empresa (GUE)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) ou Passaporte dos sócios",
+        "NIF (Número de Identificação Fiscal)",
+        "Certidão de Registo Comercial",
+        "Contrato social / escritura de constituição",
+        "Comprovativo de morada do estabelecimento",
+        "Licença de exercício da actividade comercial",
+        "Pagamento das taxas municipais"
+      ],
+      "prazo": "3 a 15 dias úteis (via GUE pode ser mais rápido)",
+      "contacto": "Administração Municipal da sua área | GUE: Linha de apoio 923 167 500",
+      "localizacao": "Administração Municipal da sua localidade | Guiché Único da Empresa (GUE) mais próximo"
+    },
+    {
+      "id": "restauracao",
+      "atividade": "Restaurante / bar / restauração e bebidas",
+      "keywords": ["restaurante", "bar", "restauracao", "bebida", "cantina", "lanchonete", "cafetaria", "pastelaria", "discoteca", "casa de pasto", "comida"],
+      "tipo": "Licença de Restauração e Bebidas",
+      "orgao": "Administração Municipal / Direcção Provincial do Comércio",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Licença sanitária / parecer da Direcção Provincial da Saúde",
+        "Comprovativo de morada do estabelecimento",
+        "Planta do estabelecimento",
+        "Alvará comercial",
+        "Pagamento das taxas de licenciamento"
+      ],
+      "prazo": "7 a 30 dias úteis",
+      "contacto": "Direcção Provincial do Comércio | Administração Municipal",
+      "localizacao": "Direcção Provincial do Comércio da sua província"
+    },
+    {
+      "id": "farmacia",
+      "atividade": "Farmácia / drogaria",
+      "keywords": ["farmacia", "drogaria", "medicamento", "remedio", "farmaco"],
+      "tipo": "Alvará / Licença Farmacêutica",
+      "orgao": "Direcção Provincial da Saúde / ARMED (Agência Reguladora de Medicamentos e Tecnologias de Saúde)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Director técnico farmacêutico inscrito na Ordem dos Farmacêuticos",
+        "Planta do estabelecimento",
+        "Parecer da Direcção Provincial da Saúde",
+        "Comprovativo de morada",
+        "Pagamento das taxas regulatórias"
+      ],
+      "prazo": "30 a 90 dias",
+      "contacto": "ARMED: +244 222 449 000 | Direcção Provincial da Saúde",
+      "localizacao": "ARMED – Luanda / Direcção Provincial da Saúde da sua província"
+    },
+    {
+      "id": "clinica",
+      "atividade": "Clínica / hospital / centro médico / laboratório",
+      "keywords": ["clinica", "hospital", "centro medico", "laboratorio", "saude", "consultorio", "posto medico", "policlinica", "dentista", "medico"],
+      "tipo": "Licença Sanitária / Alvará de Unidade Sanitária",
+      "orgao": "Direcção Provincial da Saúde / Ministério da Saúde",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Director clínico com cédula profissional",
+        "Planta das instalações",
+        "Parecer sanitário e licença de funcionamento",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "30 a 90 dias",
+      "contacto": "Direcção Provincial da Saúde | Ministério da Saúde",
+      "localizacao": "Direcção Provincial da Saúde da sua província"
+    },
+    {
+      "id": "transporte",
+      "atividade": "Transporte de passageiros / mercadorias",
+      "keywords": ["transporte", "taxi", "camião", "camiao", "autocarro", "onibus", "frota", "carga", "passageiro", "logistica", "moto-taxi", "mototaxi"],
+      "tipo": "Licença de Transporte (público/privado)",
+      "orgao": "INTRANS (Instituto Nacional dos Transportes Rodoviários) / Ministério dos Transportes",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Documentos dos veículos (título e seguro)",
+        "Certificado de inspecção técnica",
+        "Comprovativo de morada",
+        "Pagamento das taxas de licenciamento"
+      ],
+      "prazo": "15 a 45 dias",
+      "contacto": "INTRANS: +244 222 310 000 | Ministério dos Transportes",
+      "localizacao": "INTRANS – Luanda / Delegação Provincial dos Transportes"
+    },
+    {
+      "id": "construcao",
+      "atividade": "Construção civil / empreitada / obras",
+      "keywords": ["construcao", "construir", "obra", "empreitada", "engenharia", "imobiliario", "edificio", "casa", "reabilitacao", "empreiteiro"],
+      "tipo": "Alvará de Construção / Licença de Empreiteiro",
+      "orgao": "Administração Municipal / INEA (Instituto Nacional de Estradas de Angola) / Ministério das Obras Públicas, Urbanismo e Habitação",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Alvará de construção (classe conforme a obra)",
+        "Quadro técnico (engenheiros inscritos na Ordem dos Engenheiros)",
+        "Licença de obras / projecto aprovado",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "15 a 60 dias",
+      "contacto": "Administração Municipal | Ministério das Obras Públicas, Urbanismo e Habitação",
+      "localizacao": "Administração Municipal / Direcção Provincial das Obras Públicas"
+    },
+    {
+      "id": "hotelaria",
+      "atividade": "Hotel / pensão / alojamento turístico",
+      "keywords": ["hotel", "pensao", "alojamento", "hospedagem", "resort", "turismo", "pousada", "guesthouse", "motel"],
+      "tipo": "Licença de Exploração Hoteleira",
+      "orgao": "Ministério da Hotelaria e Turismo",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Classificação do empreendimento turístico",
+        "Planta das instalações",
+        "Parecer sanitário e de segurança",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "30 a 90 dias",
+      "contacto": "Ministério da Hotelaria e Turismo: +244 222 310 000",
+      "localizacao": "Ministério da Hotelaria e Turismo – Luanda / Direcção Provincial do Turismo"
+    },
+    {
+      "id": "educacao",
+      "atividade": "Escola / colégio / centro de ensino",
+      "keywords": ["escola", "colegio", "ensino", "educacao", "formacao", "centro de ensino", "explicacao", "curso", "aula"],
+      "tipo": "Licença de Ensino / Autorização de Funcionamento",
+      "orgao": "Ministério da Educação / Gabinete Provincial da Educação",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Projecto pedagógico",
+        "Planta das instalações",
+        "Parecer sanitário e de segurança",
+        "Quadro docente habilitado",
+        "Pagamento das taxas"
+      ],
+      "prazo": "30 a 90 dias",
+      "contacto": "Gabinete Provincial da Educação | Ministério da Educação",
+      "localizacao": "Gabinete Provincial da Educação da sua província"
+    },
+    {
+      "id": "importacao",
+      "atividade": "Importação / exportação",
+      "keywords": ["importacao", "exportacao", "importar", "exportar", "comercio exterior", "alfandega", "aduaneiro", "despachante"],
+      "tipo": "Licença de Importação/Exportação",
+      "orgao": "Ministério da Indústria e Comércio / AGT (Administração Geral Tributária)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Registo como importador/exportador",
+        "Certificado de origem e licença de importação (quando aplicável)",
+        "Comprovativo de morada",
+        "Pagamento das taxas aduaneiras"
+      ],
+      "prazo": "7 a 30 dias",
+      "contacto": "Ministério da Indústria e Comércio | AGT: +244 222 449 000",
+      "localizacao": "Ministério da Indústria e Comércio – Luanda / AGT"
+    },
+    {
+      "id": "banco",
+      "atividade": "Banco / instituição financeira",
+      "keywords": ["banco", "financeira", "microcredito", "credito", "instituicao financeira", "casa de cambio", "cambio"],
+      "tipo": "Autorização de Instituição Financeira",
+      "orgao": "Banco Nacional de Angola (BNA)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Capital social mínimo exigido",
+        "Plano de negócios",
+        "Idoneidade dos accionistas",
+        "Pagamento das taxas regulatórias"
+      ],
+      "prazo": "90 a 180 dias",
+      "contacto": "BNA: +244 222 679 000",
+      "localizacao": "Banco Nacional de Angola – Luanda"
+    },
+    {
+      "id": "telecom",
+      "atividade": "Telecomunicações / internet / TV por assinatura",
+      "keywords": ["telecomunicacao", "internet", "televisao", "tv", "radio", "operadora", "provedor", "fibra", "comunicacao"],
+      "tipo": "Licença de Telecomunicações",
+      "orgao": "INACOM (Instituto Angolano das Comunicações)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Projecto técnico",
+        "Comprovativo de morada",
+        "Pagamento das taxas de licenciamento"
+      ],
+      "prazo": "30 a 90 dias",
+      "contacto": "INACOM: +244 222 330 000",
+      "localizacao": "INACOM – Luanda"
+    },
+    {
+      "id": "seguros",
+      "atividade": "Seguros / corretagem de seguros",
+      "keywords": ["seguro", "seguradora", "corretora", "resseguro", "apolice"],
+      "tipo": "Autorização de Seguradora / Corretora",
+      "orgao": "ARSEG (Agência Angolana de Regulação e Supervisão de Seguros)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Capital social mínimo exigido",
+        "Plano de negócios",
+        "Idoneidade dos accionistas",
+        "Pagamento das taxas regulatórias"
+      ],
+      "prazo": "60 a 120 dias",
+      "contacto": "ARSEG: +244 222 330 000",
+      "localizacao": "ARSEG – Luanda"
+    },
+    {
+      "id": "mineracao",
+      "atividade": "Mineração / exploração de recursos minerais",
+      "keywords": ["mineracao", "mineral", "minerio", "diamante", "ouro", "pedreira", "exploracao mineral", "mina"],
+      "tipo": "Título Mineiro / Licença de Exploração",
+      "orgao": "Ministério dos Recursos Minerais, Petróleo e Gás",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Estudo de viabilidade",
+        "Licença ambiental",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "90 a 180 dias",
+      "contacto": "Ministério dos Recursos Minerais, Petróleo e Gás",
+      "localizacao": "Ministério dos Recursos Minerais, Petróleo e Gás – Luanda"
+    },
+    {
+      "id": "petroleo",
+      "atividade": "Petróleo / gás / biocombustíveis",
+      "keywords": ["petroleo", "gas", "combustivel", "biocombustivel", "refinaria", "posto de abastecimento", "gasolina", "gasoleo"],
+      "tipo": "Licença de Exploração / Comercialização de Combustíveis",
+      "orgao": "ANPG (Agência Nacional de Petróleo, Gás e Biocombustíveis) / IRDP (Instituto Regulador dos Derivados do Petróleo)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Licença ambiental",
+        "Projecto técnico",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "90 a 180 dias",
+      "contacto": "ANPG / IRDP: +244 222 330 000",
+      "localizacao": "ANPG / IRDP – Luanda"
+    },
+    {
+      "id": "pesca",
+      "atividade": "Pesca / aquicultura",
+      "keywords": ["pesca", "pescado", "aquicultura", "peixe", "marisco", "barco de pesca", "frota pesqueira"],
+      "tipo": "Licença de Pesca",
+      "orgao": "Ministério das Pescas e Recursos Marinhos",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Documentos da embarcação",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "15 a 60 dias",
+      "contacto": "Ministério das Pescas e Recursos Marinhos",
+      "localizacao": "Ministério das Pescas e Recursos Marinhos – Luanda"
+    },
+    {
+      "id": "agricultura",
+      "atividade": "Agricultura / pecuária / agro-indústria",
+      "keywords": ["agricultura", "agro", "pecuaria", "fazenda", "gado", "cultivo", "lavoura", "agroindustria", "agro-pecuaria"],
+      "tipo": "Licença de Actividade Agrícola / Pecuária",
+      "orgao": "Ministério da Agricultura e Florestas",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Título de posse/concessão da terra",
+        "Licença ambiental",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "15 a 60 dias",
+      "contacto": "Ministério da Agricultura e Florestas",
+      "localizacao": "Ministério da Agricultura e Florestas – Luanda / Direcção Provincial da Agricultura"
+    },
+    {
+      "id": "padaria",
+      "atividade": "Padaria / panificação / confeitaria",
+      "keywords": ["padaria", "panificacao", "pao", "confeitaria", "bolo", "doce", "fabrica de pao"],
+      "tipo": "Alvará Comercial / Licença de Fabrico",
+      "orgao": "Administração Municipal / Direcção Provincial do Comércio",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Parecer sanitário",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "7 a 30 dias",
+      "contacto": "Administração Municipal | Direcção Provincial do Comércio",
+      "localizacao": "Administração Municipal da sua localidade"
+    },
+    {
+      "id": "salao",
+      "atividade": "Salão de beleza / barbearia / estética",
+      "keywords": ["salao", "beleza", "barbearia", "estetica", "cabeleireiro", "manicure", "spa", "cosmetica"],
+      "tipo": "Alvará Comercial / Licença de Prestação de Serviços",
+      "orgao": "Administração Municipal",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Parecer sanitário",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "3 a 15 dias",
+      "contacto": "Administração Municipal",
+      "localizacao": "Administração Municipal da sua localidade"
+    },
+    {
+      "id": "oficina",
+      "atividade": "Oficina / mecânica / reparação",
+      "keywords": ["oficina", "mecanica", "reparacao", "manutencao", "serralharia", "carpintaria", "marcenaria", "electricista"],
+      "tipo": "Alvará Comercial / Licença de Prestação de Serviços",
+      "orgao": "Administração Municipal",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "3 a 15 dias",
+      "contacto": "Administração Municipal",
+      "localizacao": "Administração Municipal da sua localidade"
+    },
+    {
+      "id": "agencia_viagens",
+      "atividade": "Agência de viagens / operador turístico",
+      "keywords": ["agencia de viagem", "viagem", "operador turistico", "turismo", "bilhete", "passagem", "excursao"],
+      "tipo": "Licença de Agência de Viagens e Turismo",
+      "orgao": "Ministério da Hotelaria e Turismo",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "15 a 45 dias",
+      "contacto": "Ministério da Hotelaria e Turismo",
+      "localizacao": "Ministério da Hotelaria e Turismo – Luanda"
+    },
+    {
+      "id": "media",
+      "atividade": "Órgão de comunicação social / rádio / TV / jornal",
+      "keywords": ["jornal", "revista", "radio", "televisao", "media", "comunicacao social", "imprensa", "portal de noticias"],
+      "tipo": "Licença de Comunicação Social",
+      "orgao": "Ministério das Telecomunicações, Tecnologias de Informação e Comunicação Social",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Registo do órgão de comunicação social",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "30 a 90 dias",
+      "contacto": "Ministério das Telecomunicações, Tecnologias de Informação e Comunicação Social",
+      "localizacao": "Ministério das Telecomunicações – Luanda"
+    },
+    {
+      "id": "seguranca_privada",
+      "atividade": "Segurança privada / vigilância",
+      "keywords": ["seguranca privada", "vigilancia", "seguranca", "guarda", "protecao", "alarme"],
+      "tipo": "Licença de Segurança Privada",
+      "orgao": "Ministério do Interior",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Certificado de idoneidade",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "30 a 90 dias",
+      "contacto": "Ministério do Interior",
+      "localizacao": "Ministério do Interior – Luanda"
+    },
+    {
+      "id": "jogos",
+      "atividade": "Jogos de fortuna / casinos / lotaria",
+      "keywords": ["jogo", "casino", "lotaria", "aposta", "betting", "sorteio", "jogos de fortuna", "apostas"],
+      "tipo": "Licença de Jogos de Fortuna ou Azar",
+      "orgao": "ISJ (Instituto de Supervisão de Jogos) / Ministério das Finanças",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Capital social mínimo",
+        "Idoneidade dos accionistas",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "60 a 120 dias",
+      "contacto": "ISJ – Instituto de Supervisão de Jogos",
+      "localizacao": "ISJ – Luanda"
+    },
+    {
+      "id": "energia",
+      "atividade": "Electricidade / energia / água / saneamento",
+      "keywords": ["electricidade", "energia", "agua", "saneamento", "geracao", "distribuicao de energia", "solar", "hidrica"],
+      "tipo": "Licença de Produção/Distribuição de Energia ou Água",
+      "orgao": "IRSEA (Instituto Regulador dos Serviços de Electricidade e Água)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Projecto técnico",
+        "Licença ambiental",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "60 a 180 dias",
+      "contacto": "IRSEA: +244 222 330 000",
+      "localizacao": "IRSEA – Luanda"
+    },
+    {
+      "id": "imobiliaria",
+      "atividade": "Imobiliária / mediação imobiliária",
+      "keywords": ["imobiliaria", "mediacao imobiliaria", "corretagem imobiliaria", "arrendamento", "compra e venda de imovel", "imovel"],
+      "tipo": "Alvará de Mediação Imobiliária",
+      "orgao": "Administração Municipal / Ministério das Obras Públicas, Urbanismo e Habitação",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "15 a 45 dias",
+      "contacto": "Administração Municipal | Ministério das Obras Públicas, Urbanismo e Habitação",
+      "localizacao": "Administração Municipal da sua localidade"
+    },
+    {
+      "id": "contabilidade",
+      "atividade": "Contabilidade / auditoria / consultoria",
+      "keywords": ["contabilidade", "auditoria", "consultoria", "contabilista", "auditor", "consultor", "fiscalidade"],
+      "tipo": "Registo Profissional / Alvará Comercial",
+      "orgao": "OCPCA (Ordem dos Contabilistas e Peritos Contabilistas de Angola)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Inscrição na OCPCA",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "15 a 45 dias",
+      "contacto": "OCPCA: +244 222 330 000",
+      "localizacao": "OCPCA – Luanda"
+    },
+    {
+      "id": "advocacia",
+      "atividade": "Advocacia / serviços jurídicos",
+      "keywords": ["advocacia", "advogado", "juridico", "notariado", "cartorio", "escritorio de advogados", "servicos juridicos"],
+      "tipo": "Inscrição na Ordem / Licença de Escritório",
+      "orgao": "Ordem dos Advogados de Angola / Ministério da Justiça",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Inscrição na Ordem dos Advogados",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "15 a 45 dias",
+      "contacto": "Ordem dos Advogados de Angola",
+      "localizacao": "Ordem dos Advogados de Angola – Luanda"
+    },
+    {
+      "id": "ensino_superior",
+      "atividade": "Instituição de ensino superior / universidade",
+      "keywords": ["universidade", "ensino superior", "instituto superior", "faculdade", "politecnico"],
+      "tipo": "Licença de Funcionamento de Instituição de Ensino Superior",
+      "orgao": "Ministério do Ensino Superior, Ciência, Tecnologia e Inovação",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Projecto pedagógico e científico",
+        "Planta das instalações",
+        "Quadro docente habilitado",
+        "Pagamento das taxas"
+      ],
+      "prazo": "90 a 180 dias",
+      "contacto": "Ministério do Ensino Superior, Ciência, Tecnologia e Inovação",
+      "localizacao": "Ministério do Ensino Superior – Luanda"
+    },
+    {
+      "id": "aviacao",
+      "atividade": "Aviação / transporte aéreo",
+      "keywords": ["aviacao", "aereo", "companhia aerea", "aeroporto", "helicoptero", "drone", "aeronave"],
+      "tipo": "Licença de Operador Aéreo",
+      "orgao": "INIAVIC (Instituto Nacional de Aviação Civil) / Ministério dos Transportes",
+      "requisitos": [
+        "Bilhete de Identidade (BI) dos sócios",
+        "NIF e Certidão de Registo Comercial",
+        "Certificado de operador aéreo",
+        "Comprovativo de morada",
+        "Pagamento das taxas"
+      ],
+      "prazo": "90 a 180 dias",
+      "contacto": "INIAVIC: +244 222 330 000",
+      "localizacao": "INIAVIC – Luanda"
+    },
+    {
+      "id": "generico",
+      "atividade": "Actividade económica (geral)",
+      "keywords": [],
+      "tipo": "Alvará Comercial / Licença de Actividade Económica",
+      "orgao": "Administração Municipal / Guiché Único da Empresa (GUE)",
+      "requisitos": [
+        "Bilhete de Identidade (BI) ou Passaporte dos sócios",
+        "NIF (Número de Identificação Fiscal)",
+        "Certidão de Registo Comercial",
+        "Contrato social / escritura de constituição",
+        "Comprovativo de morada do estabelecimento",
+        "Pagamento das taxas municipais"
+      ],
+      "prazo": "3 a 15 dias úteis",
+      "contacto": "Administração Municipal | GUE: Linha de apoio 923 167 500",
+      "localizacao": "Administração Municipal da sua localidade | Guiché Único da Empresa (GUE)"
+    }
+  ]
+}
