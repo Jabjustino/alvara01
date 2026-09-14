@@ -22,24 +22,19 @@ app.use(session({
   }),
   cookie: { 
     maxAge: 1000 * 60 * 60 * 24 * 7,
-    secure: false, // Alterar para true se usar HTTPS estrito
+    secure: false,
     httpOnly: true
   }
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware de autenticação
 function requireAuth(req, res, next) {
   if (!req.session.userId) {
     return res.status(401).json({ erro: 'Acesso restrito. Deve iniciar sessão para utilizar o assistente.' });
   }
   next();
 }
-
-// -----------------------------------------------------------------
-// AUTENTICAÇÃO E UTILIZADORES
-// -----------------------------------------------------------------
 
 app.post('/api/register', async (req, res) => {
   try {
@@ -109,12 +104,7 @@ app.get('/api/me', (req, res) => {
   res.json({ autenticado: true, nome: req.session.userName });
 });
 
-// -----------------------------------------------------------------
-// MOTOR DE PESQUISA INTELIGENTE (Foco em Fontes Oficiais de Angola)
-// -----------------------------------------------------------------
-
 async function consultarFontesOficiaisAngola(pergunta) {
-  // Restrição de domínios institucionais oficiais de Angola conforme a regra do escopo
   const queryLimitada = `${pergunta} site:gov.ao OR site:agt.minfin.gov.ao OR site:inss.gov.ao OR site:gue.gov.ao`;
   const urlBusca = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(queryLimitada)}`;
 
@@ -123,7 +113,7 @@ async function consultarFontesOficiaisAngola(pergunta) {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) J2C-Inteligencia-Empresarial/2.0'
       },
-      signal: AbortSignal.timeout(12000) // Respeita o limite estimado mantendo rigor
+      signal: AbortSignal.timeout(12000)
     });
 
     if (!response.ok) throw new Error('Falha na consulta às fontes institucionais.');
@@ -141,7 +131,7 @@ async function consultarFontesOficiaisAngola(pergunta) {
     return {
       sucessoWeb: false,
       fontesOficiais: [
-        { nome: "Base de Conhecimiento Oficial J2C (Modo Seguro)", url: "https://www.governo.gov.ao", dataConsulta: new Date().toISOString().split('T')[0] }
+        { nome: "Base de Conhecimento Oficial J2C (Modo Seguro)", url: "https://www.governo.gov.ao", dataConsulta: new Date().toISOString().split('T')[0] }
       ]
     };
   }
@@ -154,7 +144,6 @@ app.post('/api/perguntar', requireAuth, async (req, res) => {
       return res.status(400).json({ erro: 'Por favor, escreva uma pergunta.' });
     }
 
-    // Regra 36: Tratamento de perguntas fora do âmbito empresarial de Angola
     const termosAngola = ['angola', 'empresa', 'alvará', 'licença', 'imposto', 'agt', 'inss', 'gue', 'siac', 'negócio', 'comércio', 'trabalhador', 'construção', 'restaurante', 'taxa', 'lei', 'sociedade', 'fiscal'];
     const pLower = pergunta.toLowerCase();
     const éNoEscopo = termosAngola.some(termo => pLower.includes(termo));
@@ -166,10 +155,8 @@ app.post('/api/perguntar', requireAuth, async (req, res) => {
       });
     }
 
-    // Executar pesquisa web restrita
     const resultadoWeb = await consultarFontesOficiaisAngola(pergunta);
 
-    // Gerar resposta estruturada baseada no modelo exigido
     const respostaEstruturada = {
       textoExplicativo: `Análise baseada nos procedimentos administrativos e legais vigentes em Angola para a questão: "${pergunta}".`,
       oQuePrecisa: [
@@ -187,7 +174,6 @@ app.post('/api/perguntar', requireAuth, async (req, res) => {
       fontes: resultadoWeb.fontesOficiais
     };
 
-    // Guardar no histórico do utilizador (Requisito 18 e 19)
     const db = getDB();
     await db.collection('history').insertOne({
       userId: req.session.userId,
