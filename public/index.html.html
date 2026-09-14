@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J2C Inteligência Empresarial — Negócios e Burocracia em Angola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-inner">
+      <div class="brand">
+        <span class="brand-mark">J2C</span>
+        <span class="brand-text">Inteligência Empresarial</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#pesquisa" class="nav-link">Assistente</a>
+        <a href="#historico" class="nav-link" id="nav-historico" hidden>O meu Histórico</a>
+      </nav>
+      <div class="nav-auth">
+        <span id="user-chip" class="user-chip" hidden></span>
+        <button id="btn-login" class="btn btn-ghost">Entrar</button>
+        <button id="btn-register" class="btn btn-primary">Criar conta</button>
+        <button id="btn-logout" class="btn btn-ghost" hidden>Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">J2C Inovações — Assessoria em Angola</p>
+      <h1 class="hero-title">Tudo o que precisa de saber para fazer negócios em Angola.</h1>
+      <p class="hero-subtitle">
+        Pesquise alvarás, licenças, impostos, obrigações empresariais e procedimentos em fontes oficiais.
+      </p>
+      
+      <div class="quick-examples">
+        <p class="examples-label">Experimente perguntar:</p>
+        <div class="pill-list">
+          <button class="pill" onclick="preencherPergunta('Que alvará preciso para abrir uma empresa de construção civil?')">Construção Civil</button>
+          <button class="pill" onclick="preencherPergunta('Quero abrir um restaurante em Angola. O que preciso?')">Restaurante</button>
+          <button class="pill" onclick="preencherPergunta('Quais são os impostos de uma empresa em Angola?')">Impostos AGT</button>
+          <button class="pill" onclick="preencherPergunta('Como inscrever trabalhadores no INSS?')">INSS</button>
+          <button class="pill" onclick="preencherPergunta('Como constituir uma empresa?')">Criar Empresa</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pesquisa" class="section">
+    <div class="container">
+      <div class="search-card">
+        <h2 class="section-title">Consulte o Assistente Inteligente</h2>
+        <p class="section-sub">Faça a sua pergunta em linguagem natural sobre leis, taxas, alvarás ou instituições.</p>
+
+        <form id="search-form" class="search-form" autocomplete="off">
+          <div class="search-bar" style="flex-direction: column; align-items: stretch; gap: 12px; padding: 12px;">
+            <textarea id="search-input" rows="3" placeholder="O que pretende saber sobre o seu negócio? (ex.: Que licença preciso para abrir uma farmácia?)" required style="width: 100%; border: none; outline: none; resize: none; font-size: 1rem; font-family: inherit;"></textarea>
+            <div style="display: flex; justify-content: flex-end;">
+              <button type="submit" id="search-btn" class="btn btn-primary">PESQUISAR</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="search-hint" class="search-hint">
+          <span class="hint-dot"></span>
+          Pesquisa restrita a fontes oficiais da República de Angola (.gov.ao).
+        </div>
+
+        <div id="loading" class="loading" hidden>
+          <div class="spinner"></div>
+          <p id="loading-step">🔎 A interpretar a sua pergunta...</p>
+        </div>
+
+        <div id="error-box" class="alert alert-error" hidden></div>
+
+        <div id="results" class="results" hidden>
+          <div class="result-box">
+            <h3 id="res-title" style="margin-bottom: 12px; color: #1e3a8a;"></h3>
+            <p id="res-text" style="margin-bottom: 16px;"></p>
+            
+            <div class="result-grid">
+              <div class="result-item"><strong>O que precisa:</strong><ul id="res-requisitos" style="margin-top: 6px; padding-left: 20px;"></ul></div>
+              <div class="result-item" style="margin-top: 12px;"><strong>Entidade responsável:</strong> <span id="res-entidade"></span></div>
+              <div class="result-item" style="margin-top: 8px;"><strong>Onde tratar:</strong> <span id="res-local"></span></div>
+              <div class="result-item" style="margin-top: 8px;"><strong>Contactos:</strong> <span id="res-contacto"></span></div>
+              <div class="result-item" style="margin-top: 8px;"><strong>Prazo oficial:</strong> <span id="res-prazo"></span></div>
+              <div class="result-item" style="margin-top: 8px;"><strong>Custos / Taxas:</strong> <span id="res-taxas"></span></div>
+              <div class="result-item" style="margin-top: 8px;"><strong>Base legal:</strong> <span id="res-base"></span></div>
+            </div>
+
+            <div style="margin-top: 20px; border-top: 1px solid #e5e7eb; padding-top: 12px;">
+              <strong>Fontes oficiais consultadas:</strong>
+              <div id="res-fontes" style="display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap;"></div>
+            </div>
+
+            <div class="j2c-cta" style="margin-top: 24px; background: #eff6ff; border: 1px solid #bfdbfe; padding: 16px; border-radius: 8px; text-align: center;">
+              <p style="margin-bottom: 8px; color: #1e40af; font-weight: 500;">Precisa de ajuda para tratar este processo sem complicações?</p>
+              <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 12px;">A J2C Inovações pode ajudá-lo com o processo de regularização da sua empresa.</p>
+              <a href="mailto:geral@j2cinovacoes.com" class="btn btn-primary" style="display: inline-block; text-decoration: none;">FALAR COM A J2C</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="historico" class="section section-alt" hidden>
+    <div class="container">
+      <h2 class="section-title">O meu Histórico de Consultas</h2>
+      <p class="section-sub">Registo seguro das suas pesquisas anteriores.</p>
+      <div id="history-list" class="history-list"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <span class="brand-mark">J2C</span>
+        <span class="brand-text">Inteligência Empresarial</span>
+      </div>
+      <p>As informações apresentadas têm carácter informativo e são obtidas a partir de fontes oficiais. Procedimentos, requisitos, taxas e legislação podem ser alterados pelas entidades competentes. Antes de iniciar um processo, confirme a informação junto da instituição responsável.</p>
+      <p class="footer-note">© 2026 J2C Inovações. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div id="auth-modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close aria-label="Fechar">&times;</button>
+      <div class="modal-tabs">
+        <button id="tab-login" class="tab active">Entrar</button>
+        <button id="tab-register" class="tab">Criar conta</button>
+      </div>
+
+      <form id="login-form" class="auth-form" autocomplete="off">
+        <h3>Iniciar Sessão</h3>
+        <label>Email
+          <input type="email" id="login-email" placeholder="voce@email.com" required />
+        </label>
+        <label>Palavra-passe
+          <input type="password" id="login-senha" placeholder="••••••" required />
+        </label>
+        <div id="login-error" class="alert alert-error" hidden></div>
+        <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+      </form>
+
+      <form id="register-form" class="auth-form" autocomplete="off" hidden>
+        <h3>Criar Nova Conta</h3>
+        <label>Nome completo
+          <input type="text" id="reg-nome" placeholder="O seu nome" required />
+        </label>
+        <label>Email
+          <input type="email" id="reg-email" placeholder="voce@email.com" required />
+        </label>
+        <label>Número de telefone
+          <input type="tel" id="reg-telefone" placeholder="+244 9xx xxx xxx" required />
+        </label>
+        <label>Palavra-passe
+          <input type="password" id="reg-senha" placeholder="Mínimo 4 caracteres" required />
+        </label>
+        <div id="register-error" class="alert alert-error" hidden></div>
+        <button type="submit" class="btn btn-primary btn-block">REGISTAR</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
