@@ -36,12 +36,11 @@ function requireAuth(req, res, next) {
   next();
 }
 
-// Autenticação
 app.post('/api/register', async (req, res) => {
   try {
     const { nome, email, telefone, senha } = req.body;
     if (!nome || !email || !telefone || !senha) {
-      return res.status(400).json({ erro: 'Preencha todos os campos obrigatórios (Nome, Email, Telefone, Senha).' });
+      return res.status(400).json({ erro: 'Preencha todos os campos obrigatórios.' });
     }
 
     const db = getDB();
@@ -105,9 +104,7 @@ app.get('/api/me', (req, res) => {
   res.json({ autenticado: true, nome: req.session.userName });
 });
 
-// MOTOR DE PESQUISA WEB EXCLUSIVO EM SITES GOVERNAMENTAIS DE ANGOLA
 async function executarPesquisaGovernamentalAngola(termo) {
-  // Constrói uma query restrita estritamente aos portais governamentais e de leis em Angola (.gov.ao)
   const queryWeb = `${termo} alvará licença requisitos angola site:gov.ao`;
   const urlBusca = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(queryWeb)}`;
 
@@ -116,22 +113,21 @@ async function executarPesquisaGovernamentalAngola(termo) {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) J2C-Inovacoes-Bot/3.0'
       },
-      signal: AbortSignal.timeout(9500) // Limite estrito inferior a 10 segundos conforme especificação
+      signal: AbortSignal.timeout(9500)
     });
 
     if (!response.ok) throw new Error('Erro na resposta da pesquisa web institucional.');
     const html = await response.text();
 
-    // Extração simplificada de excertos textuais relevantes dos resultados obtidos nos sites do governo
     return {
       fonte: "Pesquisa Web Direta em Portais do Governo de Angola (.gov.ao)",
       sucessoWeb: true,
       brutoHtml: html
     };
   } catch (error) {
-    console.error('Timeout ou falha na web, recorrendo à base de conhecimento interna:', error);
+    console.error('Timeout ou falha na web:', error);
     return {
-      fonte: "Base de Conhecimento Interna J2C (Modo de Alta Disponibilidade)",
+      fonte: "Base de Conhecimento Interna J2C",
       sucessoWeb: false
     };
   }
@@ -146,17 +142,14 @@ app.get('/api/search', requireAuth, async (req, res) => {
 
     const db = getDB();
 
-    // Registar no histórico de utilização do utilizador
     await db.collection('history').insertOne({
       userId: req.session.userId,
       query: query,
       createdAt: new Date()
     });
 
-    // Disparar pesquisa web restrita a Angola
     await executarPesquisaGovernamentalAngola(query);
 
-    // Cruzamento com a base de conhecimento estruturada da J2C para garantir a tabela exata exigida
     const knowledgeCollection = db.collection('knowledge');
     let registro = await knowledgeCollection.findOne({ 
       atividade: { $regex: new RegExp(query, 'i') } 
@@ -167,11 +160,10 @@ app.get('/api/search', requireAuth, async (req, res) => {
     if (registro) {
       resultadoFinal = registro;
     } else {
-      // Resposta estruturada rigorosa baseada nos parâmetros exigidos pelo negócio para qualquer actividade
       resultadoFinal = {
         atividade: query,
         tipoAlvará: `Alvará Comercial / Licença de Exploração para o sector de ${query}`,
-        orgaoEmissor: "Governo Provincial / Administração Municipal / Ministério da Indústria e Comércio (ou tutela específica)",
+        orgaoEmissor: "Governo Provincial / Administração Municipal / Ministério da Tutela em Angola",
         requisitos: [
           "Cópia do Bilhete de Identidade (BI) dos titulares ou sócios",
           "NIF (Número de Identificação Fiscal) da empresa emitido pela AGT",
